@@ -1,8 +1,12 @@
 const downloadBtn = document.querySelector(".download");
 
-downloadBtn.addEventListener("click", function () {
-    domtoimage.toBlob(document.getElementById("box")).then(function (blob) {
-        window.saveAs(blob, "output.png");
+$(document).ready(function () {
+    downloadBtn.addEventListener("click", function () {
+        domtoimage
+            .toBlob(document.getElementById("box"))
+            .then(function (blob) {
+                window.saveAs(blob, "palestine_pp.png");
+            });
     });
 });
 
